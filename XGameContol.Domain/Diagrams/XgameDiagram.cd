@@ -7,8 +7,8 @@
       <FileName>Entities\Jogador.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Email" />
       <Property Name="Nome" />
+      <Property Name="Email" />
       <Property Name="Status" />
     </ShowAsAssociation>
   </Class>
@@ -31,7 +31,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="XGameContol.Domain.Entities.MeusJogo">
-    <Position X="5.75" Y="3.75" Width="1.5" />
+    <Position X="5.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAEAAAABAAAAEAAAAAABAAAAAAAAAIAA=</HashCode>
       <FileName>Entities\MeusJogos.cs</FileName>
@@ -55,16 +55,41 @@
     </TypeIdentifier>
   </Class>
   <Class Name="XGameContol.Domain.ValueObjects.Nome">
-    <Position X="5.75" Y="1.75" Width="1.5" />
+    <Position X="5.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAA=</HashCode>
       <FileName>ValueObjects\Nome.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="XGameContol.Domain.Enums.EnumSituacaoJogador">
-    <Position X="3.5" Y="2.75" Width="1.5" />
+  <Class Name="XGameContol.Domain.ServicesMaster.ServiceJogador">
+    <Position X="14.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIEAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAUAAAEAAAAA=</HashCode>
+      <FileName>ServicesMaster\ServiceJogador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_repositorioJogador" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="XGameContol.Domain.ServicesMaster.IServicePlataforma">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Services\IServicePlataforma.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="XGameContol.Domain.Interfaces.Repositories.IRepositoryJogador">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Interfaces\Repositories\IRepositoryJogador.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="XGameContol.Domain.Enums.EnumSituacaoJogador">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIGAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enums\EnumSituacaoJogador.cs</FileName>
     </TypeIdentifier>
   </Enum>
