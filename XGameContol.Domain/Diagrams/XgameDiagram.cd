@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="XGameContol.Domain.Entities.Jogador">
+    <Position X="3.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEACAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entities\Jogador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Email" />
+      <Property Name="Nome" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="XGameContol.Domain.Entities.Jogo">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAAAAIAAAAAQAAAAAAAAAEAAAQ=</HashCode>
+      <FileName>Entities\Jogo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XGameContol.Domain.Entities.JogoPlataforma">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Entities\JogoPlataforma.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Jogo" />
+      <Property Name="Plataforma" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="XGameContol.Domain.Entities.MeusJogo">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAAABAAAAEAAAAAABAAAAAAAAAIAA=</HashCode>
+      <FileName>Entities\MeusJogos.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="JogoPlataforma" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="XGameContol.Domain.Entities.Plataforma">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entities\Plataforma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XGameContol.Domain.ValueObjects.Email">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>ValueObjects\Email.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XGameContol.Domain.ValueObjects.Nome">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAA=</HashCode>
+      <FileName>ValueObjects\Nome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="XGameContol.Domain.Enums.EnumSituacaoJogador">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIEAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\EnumSituacaoJogador.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
