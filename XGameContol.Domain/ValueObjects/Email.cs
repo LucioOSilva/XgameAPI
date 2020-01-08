@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prmToolkit.NotificationPattern;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace XGameContol.Domain.ValueObjects
 {
-    public class Email
+    public class Email : Notifiable
     {
-        public string Endereco { get; set; }
+        public string Endereco { get; private set; }
+
+        public Email(string endereco)
+        {
+            Endereco = endereco;
+
+            new AddNotifications<Email>(this).IfNotEmail(x => x.Endereco);
+        }
     }
+    
 }
