@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using XGameContol.Domain.Arguments.Jogador;
 using XGameContol.Domain.ServicesMaster;
-using XGameContol.Domain.ValueObjects;
 
 namespace XGameAppConsole
 {
@@ -18,21 +14,22 @@ namespace XGameAppConsole
             Console.WriteLine("Instancia criada do objeto request");
 
 
-            //AutenticarJogadorRequest request = new AutenticarJogadorRequest();
+            //AutenticarJogadorRequest autenticarRequest = new AutenticarJogadorRequest();
             //Console.WriteLine("Criado instancia de objeto request");
-            //request.Email = "anakinskywalker@gmail.com";
-            //request.Senha = "123456";
+            //autenticarRequest.Email = "anakinskywalker@gmail.com";
+            //autenticarRequest.Senha = "123456";
 
-            var request = new AdicionarJogadorRequest()
-            {
-                Email = "anakinskywalker@gmail.com",
-                PrimeiroNome = "anakin",
-                UltimoNome = "skywalker",
-                Senha = "123456"
-            };
+            //var AdicionarRequest = new AdicionarJogadorRequest()
+            //{
+            //    Email = "anakinskywalker@gmail.com",
+            //    Senha = "123456",
+            //    PrimeiroNome = "anakin",
+            //    UltimoNome = "skywalker"
+            //};
 
-            var response = service.AdicionarJogador(request);
-            //var response = service.AutenticarJogador(request);
+            ////var response = service.AutenticarJogador(autenticarRequest);
+            //var response2 = service.AdicionarJogador(AdicionarRequest);
+            var result = service.ListarJogador();
 
             Console.WriteLine("Serviço é valido ->" + service.IsValid());
 

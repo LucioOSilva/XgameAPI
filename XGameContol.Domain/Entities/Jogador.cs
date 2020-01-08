@@ -8,14 +8,14 @@ namespace XGameContol.Domain.Entities
 {
     public class Jogador : Notifiable
     {
-        //public Jogador(Email email, string senha)
-        //{
-        //    Email = email;
-        //    Senha = senha;
+        public Jogador(Email email, string senha)
+        {
+            Email = email;
+            Senha = senha;
 
-        //    new AddNotifications<Jogador>(this)
-        //        .IfNullOrInvalidLength(x => x.Senha, 6, 32, "A Senha deve ter de 6 a 32 caracteres");
-        //}
+            new AddNotifications<Jogador>(this)
+                .IfNullOrInvalidLength(x => x.Senha, 6, 32, "A Senha deve ter de 6 a 32 caracteres");
+        }
 
         public Jogador(Nome nome, Email email, string senha)
         {
@@ -43,7 +43,10 @@ namespace XGameContol.Domain.Entities
         public EnumSituacaoJogador Status { get; private set; }
 
 
-
+        public override string ToString()
+        {
+            return Nome.PrimeiroNome + " " + Nome.UltimoNome;
+        }
 
     }
 }

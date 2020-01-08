@@ -8,5 +8,13 @@ namespace XGameContol.Domain.Arguments.Jogador
         public Guid Id { get; set; }
         public string Message { get; set; }
 
+        public static explicit operator AdicionarJogadorResponse(Entities.Jogador entidade)
+        {
+            return new AdicionarJogadorResponse()
+            {
+                Id = entidade.Id,
+                Message = "Operação realizada com sucesso!"
+            };
+        }
     }
 }
