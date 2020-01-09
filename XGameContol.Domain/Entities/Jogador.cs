@@ -42,6 +42,13 @@ namespace XGameContol.Domain.Entities
         public string Senha { get; private set; }
         public EnumSituacaoJogador Status { get; private set; }
 
+        public void AlterarJogador(Nome nome, Email email, EnumSituacaoJogador status)
+        {
+            Nome = nome;
+            Email = email;
+            new AddNotifications<Jogador>(this).IfFalse(Status == EnumSituacaoJogador.Ativo, "Só é possivel alterar jogador 'ativo'");
+            AddNotifications(nome, email);
+        }
 
         public override string ToString()
         {

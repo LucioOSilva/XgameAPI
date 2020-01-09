@@ -40,7 +40,33 @@ namespace XGameContol.Domain.ServicesMaster
 
         public AlterarJogadorResponse AlterarJogador(AlterarJogadorRequest request)
         {
-            throw new NotImplementedException();
+            if (request == null)
+            {
+                AddNotification("AlterarJogadorRequest", "Dados nulos para alterar jogador");
+            }
+
+            Jogador jogador = _repositorioJogador.ObterJogadorPorId(request.Id);
+            if (jogador  == null)
+            {
+                AddNotification("Id", "Dados nao encontrados");
+                return null;
+            }
+
+            var nome = new Nome(request.PrimeiroNome, request.UltimoNome);
+            var email = new Email(request.Email);
+
+            jogador.AlterarJogador(nome, email, jogador.Status);
+
+            AddNotifications(jogador);
+
+            if (this.IsInvalid())
+            {
+                return null;
+            }
+
+            _repositorioJogador.AlterarJogador(jogador);
+
+            return (AlterarJogadorResponse)jogador;
         }
 
         public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request)
@@ -53,7 +79,7 @@ namespace XGameContol.Domain.ServicesMaster
             var email = new Email(request.Email);
             var jogador = new Jogador(email, request.Senha);
 
-            AddNotifications(jogador, email);
+            AddNotifications(jogador);
 
             if (jogador.IsInvalid())
             {
